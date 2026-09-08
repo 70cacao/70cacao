@@ -35,7 +35,8 @@ npm workspaces monorepo, SQLite, local + hosted LLMs
 
 ## CoPilot — Windows desktop assistant
 
-*Private repository, in progress.*
+*In development. The [repository](https://github.com/70cacao/CoPilot) carries the full
+description; the source itself is not public.*
 
 Rust and Tauri v2 underneath, React and TypeScript on top, talking straight to the Windows
 APIs. No Python, no second runtime — one binary and an installer. It is the same idea as

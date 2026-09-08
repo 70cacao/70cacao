@@ -33,16 +33,16 @@ npm workspaces monorepo, SQLite, local + hosted LLMs
 
 ---
 
-## CoPilot — Windows desktop assistant
+## Orynex — Windows desktop assistant
 
-*In development. The [repository](https://github.com/70cacao/CoPilot) carries the full
+*In development. The [repository](https://github.com/70cacao/Orynex) carries the full
 description; the source itself is not public.*
 
 Rust and Tauri v2 underneath, React and TypeScript on top, talking straight to the Windows
 APIs. No Python, no second runtime — one binary and an installer. It is the same idea as
 JARVIS taken seriously: local-first, and you bring your own API key.
 
-Where it stands: **807 tests green**, a written architecture, and a decision log that
+Where it stands: **816 tests green**, a written architecture, and a decision log that
 records why things are the way they are.
 
 Three decisions I would defend in an interview:
@@ -65,7 +65,7 @@ Three habits, all of them learned by first getting it wrong:
 documents. When the code and the document disagree, the document wins and the code gets
 changed — otherwise the document is decoration within a week.
 
-**Measure instead of guessing.** A relevance threshold in CoPilot looked reasonable and
+**Measure instead of guessing.** A relevance threshold in Orynex looked reasonable and
 let five out of five nonsense questions through. The fix was not a better number; it was
 realising that no fixed number works there, and measuring on real data until a relative
 threshold showed itself.

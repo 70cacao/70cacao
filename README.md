@@ -35,8 +35,12 @@ npm workspaces monorepo, SQLite, local + hosted LLMs
 
 ## Orynex — Windows desktop assistant
 
-*In development. The [repository](https://github.com/70cacao/Orynex) carries the full
-description; the source itself is not public.*
+**[→ Download the installer](https://github.com/70cacao/Orynex/releases/download/v0.3.1/Orynex_0.3.1_x64-setup.exe)** · Windows 11 · 87 MB · [what's in it](https://github.com/70cacao/Orynex/releases/tag/v0.3.1)
+
+*Pre-release, and honestly so: it is not code-signed yet, so Windows will show an "unknown
+publisher" warning. The [release notes](https://github.com/70cacao/Orynex/releases/tag/v0.3.1)
+say why, and what else is unfinished. The [repository](https://github.com/70cacao/Orynex)
+carries the full description; the source itself is not public.*
 
 Rust and Tauri v2 underneath, React and TypeScript on top, talking straight to the Windows
 APIs. No Python, no second runtime — one binary and an installer. It is the same idea as

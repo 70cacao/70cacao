@@ -4,7 +4,7 @@ I build AI assistants that run on my own hardware — the kind you can unplug fr
 internet and still get something out of. Both projects below exist because I wanted the
 thing to exist, not because a course told me to build them.
 
-**I am looking for an Ausbildung in software development.**
+**I am looking for an Ausbildung as Fachinformatiker — open to all four Fachrichtungen.**
 
 ---
 

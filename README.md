@@ -8,6 +8,35 @@ thing to exist, not because a course told me to build them.
 
 ---
 
+## Orynex — Windows desktop assistant
+
+**[→ Download the newest pre-release](https://github.com/70cacao/Orynex/releases)** · Windows 11 · ~91 MB · the newest is always at the top
+
+*Pre-release, and honestly so: it is not code-signed yet, so Windows will show an "unknown
+publisher" warning. The [release notes](https://github.com/70cacao/Orynex/releases)
+say why, and what else is unfinished. The [repository](https://github.com/70cacao/Orynex)
+carries the full description; the source itself is not public.*
+
+Rust and Tauri v2 underneath, React and TypeScript on top, talking straight to the Windows
+APIs. No Python, no second runtime — one binary and an installer. It is the same idea as
+JARVIS taken seriously: local-first, and you bring your own API key.
+
+Where it stands: **1,933 tests green**, each new rule checked by mutation testing (remove
+the rule, the tests must fail), a written architecture, and a decision log that records
+why things are the way they are.
+
+Three decisions I would defend in an interview:
+
+- **Every tool declares what it needs**, and the permission check happens before it runs
+  rather than inside it — so a new tool cannot quietly grant itself something.
+- **The app never runs as administrator.** The handful of actions that genuinely need
+  admin rights go through a separate, small helper process, so the surface that is
+  elevated stays small enough to read in one sitting.
+- **Secrets are never in a config file or a log.** They live in the Windows Credential
+  Manager, and the key never leaves the module that talks to the provider.
+
+---
+
 ## JARVIS — self-hosted personal AI assistant
 
 [![tests](https://github.com/70cacao/Public-Jarvis-Project/actions/workflows/tests.yml/badge.svg)](https://github.com/70cacao/Public-Jarvis-Project/actions/workflows/tests.yml)
@@ -30,34 +59,6 @@ The parts I am most pleased with are not the features:
 
 **→ [Public-Jarvis-Project](https://github.com/70cacao/Public-Jarvis-Project)** · JavaScript,
 npm workspaces monorepo, SQLite, local + hosted LLMs
-
----
-
-## Orynex — Windows desktop assistant
-
-**[→ Download the installer](https://github.com/70cacao/Orynex/releases/download/v0.3.1/Orynex_0.3.1_x64-setup.exe)** · Windows 11 · 87 MB · [what's in it](https://github.com/70cacao/Orynex/releases/tag/v0.3.1)
-
-*Pre-release, and honestly so: it is not code-signed yet, so Windows will show an "unknown
-publisher" warning. The [release notes](https://github.com/70cacao/Orynex/releases/tag/v0.3.1)
-say why, and what else is unfinished. The [repository](https://github.com/70cacao/Orynex)
-carries the full description; the source itself is not public.*
-
-Rust and Tauri v2 underneath, React and TypeScript on top, talking straight to the Windows
-APIs. No Python, no second runtime — one binary and an installer. It is the same idea as
-JARVIS taken seriously: local-first, and you bring your own API key.
-
-Where it stands: **816 tests green**, a written architecture, and a decision log that
-records why things are the way they are.
-
-Three decisions I would defend in an interview:
-
-- **Every tool declares what it needs**, and the permission check happens before it runs
-  rather than inside it — so a new tool cannot quietly grant itself something.
-- **The app never runs as administrator.** The handful of actions that genuinely need
-  admin rights go through a separate, small helper process, so the surface that is
-  elevated stays small enough to read in one sitting.
-- **Secrets are never in a config file or a log.** They live in the Windows Credential
-  Manager, and the key never leaves the module that talks to the provider.
 
 ---
 
